@@ -451,6 +451,7 @@ export const STORIES_DATA = {
         "after": "cases.contouring-2.after",
         "supplementary": [
           "cases.contouring-2.supp-136",
+          "cases.contouring-2.supp-137",
           "cases.contouring-2.supp-138",
           "cases.contouring-2.supp-140",
           "cases.contouring-2.supp-141"
@@ -477,6 +478,7 @@ export const STORIES_DATA = {
         "immediate": "cases.nose-1.immediate",
         "after": "cases.nose-1.after",
         "supplementary": [
+          "cases.nose-1.supp-113",
           "cases.nose-1.supp-115",
           "cases.nose-1.supp-117",
           "cases.nose-1.supp-118"
