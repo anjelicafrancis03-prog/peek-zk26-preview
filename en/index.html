@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allevia — Custom 3D PEEK Facial Implants in Shanghai</title>
+  <meta
+    name="description"
+    content="Explore CT-based custom 3D PEEK facial implants in Shanghai: interactive 3D skull model, before/simulated-after visual guides, why Shanghai, safety & stay planning, other procedures, and transparent written quotes."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <!-- Top Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#peek" class="brand-mark" aria-label="Allevia Advanced Aesthetics home">
+        <span class="brand-word">Allevia</span>
+        <span class="brand-sub">Shanghai · PEEK 2.0</span>
+      </a>
+      <a href="#contact" class="header-cta" id="header-free-cta">Ask a question · free</a>
+    </div>
+  </header>
+
+  <!-- Sticky 5-Section Table of Contents -->
+  <nav class="toc-bar" id="toc-bar" aria-label="Page sections">
+    <ul class="toc-list">
+      <li><a class="toc-link is-active" href="#peek" data-section="peek">PEEK</a></li>
+      <li><a class="toc-link" href="#why-shanghai" data-section="why-shanghai">Why Shanghai</a></li>
+      <li><a class="toc-link" href="#before-you-decide" data-section="before-you-decide">Before you decide</a></li>
+      <li><a class="toc-link" href="#other-procedures" data-section="other-procedures">Other procedures</a></li>
+      <li><a class="toc-link" href="#prices" data-section="prices">Prices &amp; your quote</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ====================================================================
+         DARK ZONE: Section 1 Steps 1–4 (3D Skull, 8-Grid, PEEK Gallery, 50s Film)
+         ==================================================================== -->
+    <div class="zone-dark" id="zone-dark">
+      <section id="peek" class="hero-section" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <p class="eyebrow">Section 1 · Custom 3D PEEK Facial Implants</p>
+              <h1 id="hero-heading" class="display-title">
+                Bone-level contouring, designed from your CT before you travel.
+              </h1>
+              <p class="hero-lead">
+                PEEK implants are shaped to your individual skeletal anatomy rather than carved from generic blocks.
+                Explore the 3D demonstrator skull, inspect 8 area simulations, and see how the full Shanghai pathway works.
+              </p>
+
+              <div class="hero-facts" aria-label="Key structural coverage">
+                <div class="hero-fact-card">
+                  <div class="hero-fact-num">7 areas</div>
+                  <div class="hero-fact-label">Simulation design range (A-list)</div>
+                </div>
+                <div class="hero-fact-card">
+                  <div class="hero-fact-num">5 areas</div>
+                  <div class="hero-fact-label">Existing PEEK implant components</div>
+                </div>
+                <div class="hero-fact-card">
+                  <div class="hero-fact-num">50s film</div>
+                  <div class="hero-fact-label">How CT planning meets 3D bone fit</div>
+                </div>
+                <div class="hero-fact-card">
+                  <div class="hero-fact-num">54 items</div>
+                  <div class="hero-fact-label">Published CNY directory + written PEEK quote</div>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <a href="#grid-8" class="btn btn-gold">Explore 8 area simulations</a>
+                <a href="#peek-film" class="btn btn-ghost-dark">Watch 50s PEEK film</a>
+              </div>
+            </div>
+
+            <!-- Interactive 3D Skull Viewer (Real GLB + Clickable Hotspots + 2D Fallback Views) -->
+            <div class="viewer-card">
+              <div class="viewer-stage" id="viewer-stage">
+                <model-viewer
+                  id="peek-skull-viewer"
+                  src="../assets/model/peek-model.glb"
+                  poster="../assets/views/oblique.jpg"
+                  alt="Interactive 3D demonstrator skull showing custom PEEK implant areas"
+                  camera-controls
+                  touch-action="pan-y"
+                  shadow-intensity="0.7"
+                  exposure="1.05"
+                  camera-orbit="28deg 82deg 105%"
+                  min-camera-orbit="auto auto 65%"
+                  max-camera-orbit="auto auto 160%"
+                >
+                  <!-- 7 A-List Hotspots injected by app.js -->
+                </model-viewer>
+                <img
+                  id="viewer-2d-img"
+                  class="viewer-fallback-2d"
+                  src="../assets/views/oblique.jpg"
+                  alt="Demonstrator skull 2D reference angle"
+                  hidden
+                />
+              </div>
+
+              <div class="viewer-toolbar">
+                <div class="mode-pills" role="group" aria-label="Skull view mode">
+                  <button type="button" class="pill-btn is-active" data-view-mode="3d">Interactive 3D</button>
+                  <button type="button" class="pill-btn" data-view-mode="oblique">Oblique 2D</button>
+                  <button type="button" class="pill-btn" data-view-mode="front">Front 2D</button>
+                  <button type="button" class="pill-btn" data-view-mode="side">Side 2D</button>
+                </div>
+                <span class="muted" style="font-size:12px;">Drag to rotate · Tap any area</span>
+              </div>
+
+              <div class="viewer-area-bar">
+                <div style="font-size:12px;color:var(--dark-muted);">Jump directly to an area (opens map &amp; gallery):</div>
+                <div class="viewer-area-pills" id="hero-area-pills"></div>
+              </div>
+
+              <p class="viewer-disclaimer">
+                Demonstrator model, not patient data. Simulation for illustration only — not a medical promise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: 8-Grid Simulation Showcase -->
+      <section id="grid-8" class="block-section-dark" aria-labelledby="grid-8-heading">
+        <div class="container">
+          <div class="section-header-row">
+            <p class="eyebrow">Step 2 · 8-Tile Visual Simulation</p>
+            <h2 id="grid-8-heading" class="block-title">Before &amp; simulated after — by facial area</h2>
+            <p class="muted" style="margin:8px 0 0;max-width:68ch;">
+              From a baseline reference to 3D skeletal placement and back to a 2D view: tap or hover any tile to compare
+              <strong>Before</strong> and <strong>Simulated after</strong>. Every tile is an illustrative 3D design study, not a medical promise.
+            </p>
+          </div>
+
+          <div class="grid-group-label">
+            <span>Male demonstrator · 4 structural areas</span>
+            <span style="font-size:11px;font-weight:500;opacity:.8;">Tap tile to toggle · Tap ⤢ to enlarge</span>
+          </div>
+          <div class="grid-8" id="grid-male"></div>
+
+          <div class="grid-group-label">
+            <span>Female demonstrator · 4 areas (pending shoot)</span>
+            <span class="badge-pending">Fixed-height placeholders</span>
+          </div>
+          <div class="grid-8" id="grid-female"></div>
+
+          <!-- Zero-state disclaimer written ONCE below the 8-grid -->
+          <div class="zero-state-note">
+            <strong>Notice on simulations &amp; current case count:</strong>
+            Every tile above is a 3D simulation for illustration and is not a medical promise. Final implant geometry and the surgical plan follow the in-person assessment and the factory’s precise modelling.
+            Real authorized PEEK patient photography is currently being onboarded from our partner institution (current PEEK gallery count: 0; our 8 existing non-PEEK clinical stories appear in Section 4).
+          </div>
+
+          <!-- Step 3: Embedded PEEK Real-Cases Gallery (immediately below 8-grid) -->
+          <div class="accordion-dark" id="peek-gallery-section">
+            <button
+              type="button"
+              class="acc-trigger-dark"
+              id="peek-gallery-toggle"
+              aria-expanded="false"
+              aria-controls="peek-gallery-panel"
+            >
+              <div>
+                <div class="eyebrow" style="margin-bottom:4px;">Step 3 · Embedded PEEK Gallery</div>
+                <div style="font-size:18px;font-weight:600;">
+                  Real PEEK cases by area
+                  <span class="badge-pending" style="margin-left:8px;">Current PEEK cases: 0</span>
+                </div>
+              </div>
+              <span class="acc-chevron" aria-hidden="true">▾</span>
+            </button>
+
+            <div id="peek-gallery-panel" class="acc-panel-dark" hidden>
+              <div class="gallery-top-strip">
+                <div class="film-thumb-placeholder">
+                  <div class="eyebrow" style="margin:0;">Process Film C · Thumbnail</div>
+                  <div style="font-size:14px;font-weight:600;color:var(--dark-text);">
+                    How custom PEEK design, 3D printing &amp; placement fit together
+                  </div>
+                  <div class="muted" style="font-size:12.5px;">
+                    [Process film C — pending filming with partner institution &amp; manufacturer]
+                  </div>
+                </div>
+
+                <details class="how-to-read-box">
+                  <summary>How to read our photos (4 standards)</summary>
+                  <ol class="how-to-read-list">
+                    <li>Photos are taken under consistent lighting, camera distance, and neutral expression wherever possible.</li>
+                    <li>Clinical photographs are not cosmetically retouched to alter bone contour or skin texture.</li>
+                    <li>Each set notes the recovery stage (before, early post-op, or stabilised follow-up), because swelling changes appearance over months.</li>
+                    <li>Individual anatomy, soft-tissue thickness, and healing speed vary — one patient’s result is never a guarantee for another.</li>
+                  </ol>
+                </details>
+              </div>
+
+              <p class="muted" style="font-size:13px;margin:0 0 12px;">
+                All 7 A-list areas are indexed below. Authorized PEEK patient records will be published area by area only after separate written patient consent is archived.
+              </p>
+
+              <div class="gallery-sub-list" id="peek-gallery-areas"></div>
+            </div>
+          </div>
+
+          <!-- Appendix D Transition Sentence 1 -->
+          <blockquote class="transition-quote">
+            “This is how PEEK works on a skull — now see how it is designed and placed in 50 seconds.”
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Step 4: 50-Second PEEK Film -->
+      <section id="peek-film" class="block-section-dark" aria-labelledby="peek-film-heading">
+        <div class="container">
+          <p class="eyebrow">Step 4 · 50-Second Overview Film</p>
+          <h2 id="peek-film-heading" class="block-title">See how custom PEEK fits the skull</h2>
+
+          <div class="film-card">
+            <video
+              id="peek-film-video"
+              class="film-player"
+              controls
+              playsinline
+              preload="metadata"
+              poster="../assets/film/film_poster.jpg"
+            >
+              <!-- Single swap point injected via en/config.js (MEDIA_CONFIG.PEEK_FILM_SRC) -->
+            </video>
+            <div class="film-caption-bar">
+              Illustrative only. Implant forms are transferred from planning images onto a reference skull by anatomical landmarks; not a surgeon's standard drawing.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         LIGHT NEUTRAL ZONE: Section 1 Steps 5–9 + Sections 2, 3, 4, 5
+         ==================================================================== -->
+    <div class="zone-light" id="zone-light">
+      <div class="container">
+        <!-- Step 5: 7-Area Interactive Map + B-03(b) Cautions -->
+        <section id="area-map" class="light-block" aria-labelledby="area-map-heading">
+          <p class="eyebrow">Step 5 · PEEK by Area (A-List)</p>
+          <h2 id="area-map-heading" class="section-title">7 design areas, 5 existing implant components</h2>
+          <p class="muted" style="margin:8px 0 0;max-width:68ch;">
+            We keep simulation scope and existing implant components clearly separated so you always know what is already available versus what can be modelled in custom design.
+          </p>
+
+          <div class="split-scope-bar">
+            <div class="scope-pill-card">
+              <h3>Existing PEEK implant components (5 areas)</h3>
+              <p class="muted" style="margin:0;font-size:14px;">
+                <strong>Chin · Jaw angle (incl. jawline) · Nasal base · Cheekbones · Brow ridge</strong>
+              </p>
+            </div>
+            <div class="scope-pill-card">
+              <h3>Simulation design range (7 areas — A-list)</h3>
+              <p class="muted" style="margin:0;font-size:14px;">
+                <strong>Brow ridge · Cheekbones · Nasal base · Chin · Jaw angle · Forehead · Crown</strong>
+                <br />
+                <span>Design range, not a list of standard off-the-shelf implants.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="area-selector-pills" id="area-map-pills" role="tablist" aria-label="Select facial area"></div>
+          <div class="area-detail-panel" id="area-map-detail" role="tabpanel"></div>
+        </section>
+
+        <!-- Step 6: 5-Material Comparison Table -->
+        <section id="materials" class="light-block" aria-labelledby="materials-heading">
+          <p class="eyebrow">Step 6 · Material Comparison</p>
+          <h2 id="materials-heading" class="section-title">How PEEK compares with 4 other facial implant materials</h2>
+          <p class="muted" style="margin:8px 0 0;max-width:66ch;">
+            Each material behaves differently on imaging, in surgical shaping, and in tissue response. Clinical limitations are left pending direct review by our partner surgical team.
+          </p>
+
+          <div class="responsive-table-wrap">
+            <table class="data-table stack-mobile" aria-label="Five facial implant materials comparison">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Customisation &amp; fit</th>
+                  <th>Imaging (CT / MRI)</th>
+                  <th>Mechanical &amp; structural profile</th>
+                  <th>Key limitations</th>
+                </tr>
+              </thead>
+              <tbody id="materials-tbody"></tbody>
+            </table>
+          </div>
+
+          <p class="table-footer-note">
+            PEEK is one option, not the only option. Material suitability is confirmed in person by our surgical team.
+          </p>
+
+          <!-- Appendix D Transition Sentence 2 -->
+          <blockquote class="transition-quote">
+            “Those are the material differences. Next: how the full design, printing and placement process works.”
+          </blockquote>
+        </section>
+
+        <!-- Step 7: Combined Material + Process Film Placeholder (Film B + C) -->
+        <section id="process-film" class="light-block" aria-labelledby="process-film-heading">
+          <div class="film-bc-placeholder">
+            <p class="eyebrow" style="margin:0;">Step 7 · Combined Material &amp; Process Film (3–5 min)</p>
+            <h2 id="process-film-heading" class="block-title">PEEK material deep-dive + CAD-to-OR walkthrough</h2>
+            <p class="muted" style="margin:0;max-width:66ch;">
+              Dedicated 3–5 minute educational film covering PEEK material properties, CT-to-CAD design, 3D printing tolerances, and surgical placement (separate from the Shanghai travel series in Section 2).
+            </p>
+            <div>
+              <span class="badge-pending">Film B + Process Film C · Pending filming &amp; partner authorization</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 8: 6-Step Process Bar -->
+        <section id="process-steps" class="light-block" aria-labelledby="process-steps-heading">
+          <p class="eyebrow">Step 8 · End-to-End Pathway</p>
+          <h2 id="process-steps-heading" class="section-title">Six steps from first question to fit-to-fly</h2>
+          <div class="process-grid" id="process-grid"></div>
+        </section>
+
+        <!-- Step 9: Price Anchor + Next Step Block + PEEK Mini-FAQ -->
+        <section id="next-step" class="light-block" aria-labelledby="next-step-heading">
+          <div class="next-step-card">
+            <div>
+              <p class="eyebrow" style="margin-bottom:6px;">Step 9 · Price Anchor &amp; Next Step</p>
+              <h2 id="next-step-heading" class="block-title">Custom PEEK implants: quoted in writing after consultation and CT review</h2>
+              <p class="muted" style="margin:6px 0 0;">
+                Indicative surgery range: <span class="badge-pending">[Range pending clinic confirmation]</span> · Written quote confirms all itemized clinical fees before any commitment.
+              </p>
+            </div>
+
+            <div class="next-step-buttons">
+              <a href="#contact" class="btn btn-primary-light">Ask a question · free</a>
+              <a href="#contact" class="btn btn-outline-light" id="sim-299-cta">See your own face — USD 299</a>
+            </div>
+
+            <p style="margin:0;font-size:13.5px;font-weight:500;">
+              Ask first. No files, no payment, no obligation.
+            </p>
+
+            <div class="terms-line">
+              <strong>USD 299 — credited as USD 1,000 toward your PEEK surgery only; non-refundable once design has started, valid 12 months, non-transferable</strong>
+              <span class="badge-pending" style="margin-left:6px;">[Pending clinic written confirmation]</span>
+              <br />
+              <span style="display:inline-block;margin-top:6px;">
+                Covers: full-head design from your CT, before/after views, unlimited revisions.
+                <span class="badge-pending">[Pending clinic written confirmation]</span>
+              </span>
+              <br />
+              <span class="muted" style="display:inline-block;margin-top:4px;font-size:13px;">
+                Consultation is free. Simulation design is a paid service.
+              </span>
+            </div>
+
+            <p style="margin:0;font-size:14px;">
+              <a href="#before-you-decide" id="jump-pain-recovery" style="color:var(--bronze);font-weight:600;text-decoration:underline;text-underline-offset:3px;">
+                Pain, recovery and what if it goes wrong → Section ‘Before you decide’
+              </a>
+            </p>
+          </div>
+
+          <!-- Embedded PEEK Section Mini-FAQ (includes shared "When PEEK is not the answer") -->
+          <div class="card-light" style="margin-top:20px;">
+            <p class="eyebrow">PEEK Quick Questions</p>
+            <div style="display:grid;gap:12px;margin-top:8px;">
+              <details open>
+                <summary style="font-weight:600;cursor:pointer;">When is PEEK not the right option?</summary>
+                <div id="not-peek-faq-mount" style="margin-top:10px;"></div>
+              </details>
+              <details>
+                <summary style="font-weight:600;cursor:pointer;">Is the 3D simulation the same as a surgical plan?</summary>
+                <p class="muted" style="margin:8px 0 0;font-size:14px;">
+                  No. Simulation design is a design illustration and is not a medical promise. Final implant geometry and the surgical plan follow the in-person assessment and the factory’s precise modelling.
+                </p>
+              </details>
+              <details>
+                <summary style="font-weight:600;cursor:pointer;">Is simulation design included in the free consultation?</summary>
+                <p class="muted" style="margin:8px 0 0;font-size:14px;">
+                  No. Consultation is free. Simulation design is a paid service (USD 299 — credited as USD 1,000 toward your PEEK surgery only; non-refundable once design has started, valid 12 months, non-transferable).
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Appendix D Transition Sentence 4 (Section 1 -> Section 2) -->
+          <blockquote class="transition-quote">
+            “PEEK is the same material wherever you go. So the real choice is where the surgery happens — who does it, how often they do it, and what it costs you.”
+          </blockquote>
+        </section>
+
+        <!-- ================================================================
+             SECTION 2: Why Shanghai (China) — Default EXPANDED
+             ================================================================ -->
+        <section id="why-shanghai" class="major-section" aria-labelledby="why-shanghai-heading">
+          <p class="eyebrow">Section 2 · 3-Part Documentary Series (Default Expanded)</p>
+          <h2 id="why-shanghai-heading" class="section-title">
+            Why Shanghai <span style="font-size:0.62em;font-weight:400;color:var(--light-muted);">(China)</span>
+          </h2>
+          <p class="muted" style="margin:8px 0 0;max-width:68ch;">
+            Three self-produced 15–20 minute episodes answering the practical questions international patients ask first:
+            safety, surgical experience, and how recovery-first travel works in Shanghai.
+          </p>
+
+          <div class="episode-stack" id="youtube-episodes"></div>
+        </section>
+
+        <!-- ================================================================
+             SECTION 3: Before you decide (Safe · Easy · Fair) — Default COLLAPSED
+             ================================================================ -->
+        <section id="before-you-decide" class="major-section" aria-labelledby="before-heading">
+          <div class="section-accordion">
+            <div class="section-acc-head">
+              <div class="section-acc-top">
+                <div>
+                  <p class="eyebrow">Section 3 · One-Stop Support, Safety &amp; Boundaries</p>
+                  <h2 id="before-heading" class="section-title">Before you decide</h2>
+                  <p class="muted" style="margin:4px 0 0;font-weight:500;">Safe · Easy · Fair</p>
+                </div>
+                <button
+                  type="button"
+                  class="section-toggle-btn"
+                  data-acc-target="before-body"
+                  aria-expanded="false"
+                  aria-controls="before-body"
+                >
+                  <span class="toggle-label">Expand details</span>
+                  <span class="acc-chevron" aria-hidden="true">▾</span>
+                </button>
+              </div>
+
+              <!-- 3 Always-Visible Preview Lines (mandatory even when collapsed) -->
+              <div class="preview-lines">
+                <button type="button" class="preview-line-btn" id="preview-three-questions">
+                  <strong>1. Does it hurt? How long is recovery? What if it goes wrong?</strong>
+                  <br />
+                  <span class="muted" style="font-size:12.5px;">
+                    Anesthesia: [Pending] · Hospital stay: [Pending] · Return to daily activity: [Pending] · Fit-to-fly: [Pending] · Final result: [Pending] — tap to open Risks &amp; Recovery
+                  </span>
+                </button>
+                <p class="preview-line">
+                  <strong>2. Why choose us:</strong>
+                  Licensed partner · bilingual team · <span class="badge-pending">[Institution &amp; credentials pending clinic confirmation]</span>
+                </p>
+                <p class="preview-line">
+                  <strong>3. What you handle yourself (6 items):</strong>
+                  Passport/visa, in-person +86 SIM with face check, medical history &amp; consultation, written quote &amp; deposit, consent forms, and follow-up visits.
+                </p>
+              </div>
+            </div>
+
+            <div id="before-body" class="section-acc-body" hidden>
+              <!-- 3.1 Why Choose Us + Institution & Surgical Team Credentials -->
+              <div class="sub-card" id="why-choose-us">
+                <p class="eyebrow">Why choose us &amp; verifiable credentials</p>
+                <h3>Partner institution &amp; our surgical team</h3>
+                <div class="grid-2" style="margin-top:12px;">
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>Partner medical institution</strong>
+                    <p class="muted" style="margin:6px 0 0;font-size:13.5px;">
+                      Institution name: <span class="badge-pending">[Pending partner institution confirmation]</span><br />
+                      Medical Institution Practice License: <span class="badge-pending">[Pending clinic confirmation]</span>
+                    </p>
+                  </div>
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>Our surgical team (written credentials — no faces or names published)</strong>
+                    <p class="muted" style="margin:6px 0 0;font-size:13.5px;">
+                      Practice category · License number · Years of practice · Verified PEEK case record:
+                      <span class="badge-pending">[Pending clinic documentation]</span><br />
+                      Verification path: National Health Commission (NHC) official practitioner registry.
+                    </p>
+                  </div>
+                </div>
+                <div class="grid-3" style="margin-top:14px;">
+                  <div>
+                    <strong>Listen before planning</strong>
+                    <p class="muted" style="margin:4px 0 0;font-size:13px;">Your consultation starts with your questions and goals before any itinerary is proposed.</p>
+                  </div>
+                  <div>
+                    <strong>Clear written costs</strong>
+                    <p class="muted" style="margin:4px 0 0;font-size:13px;">Agreed scope and exclusions are confirmed in writing before booking.</p>
+                  </div>
+                  <div>
+                    <strong>Privacy &amp; post-stay support</strong>
+                    <p class="muted" style="margin:4px 0 0;font-size:13px;">Publishing your story or photos requires separate permission. Ongoing post-return communication coordination is included (does not automatically cover future medical treatment or travel).</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3.2 6 Self-Handled Items + CT Upload Action -->
+              <div class="sub-card">
+                <p class="eyebrow">Division of work</p>
+                <h3>You only handle these 6 things yourself</h3>
+                <p class="muted" style="margin:0 0 12px;font-size:14px;">
+                  We coordinate or assist with the rest; exact inclusions, exclusions, and self-funded items are listed in the 4-column table below.
+                </p>
+                <ol id="self-handled-list" style="margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px;"></ol>
+                <div style="margin-top:14px;padding:12px 14px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13.5px;">
+                  <strong>Separate single action (for simulation design):</strong>
+                  Upload your hospital CT archive online via the transfer link your consultant provides (recommended limit up to 500 MB; used strictly for design assessment and deleted upon completion, subject to separate privacy consent).
+                </div>
+              </div>
+
+              <!-- 3.3 12-Item x 4-Column Boundary Table -->
+              <div class="sub-card">
+                <p class="eyebrow">What is included vs. self-funded</p>
+                <h3>12-item service boundary table</h3>
+                <div class="responsive-table-wrap">
+                  <table class="data-table stack-mobile" aria-label="12-item service boundary table">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Included</th>
+                        <th>Not included</th>
+                        <th>Paid extra</th>
+                        <th>Assist only (no liability)</th>
+                      </tr>
+                    </thead>
+                    <tbody id="boundary-tbody"></tbody>
+                  </table>
+                </div>
+                <p style="margin:14px 0 0;font-size:14px;font-weight:600;">
+                  Total trip cost = written quote + flights + [self-funded items listed above]
+                </p>
+              </div>
+
+              <!-- 3.4 Safe · Easy · Fair (3-column Promise / Evidence / Scope) -->
+              <div class="sub-card">
+                <p class="eyebrow">Our three commitments</p>
+                <h3>Safe · Easy · Fair — what we promise, how it is backed, and its scope</h3>
+                <div class="grid-3" style="margin-top:12px;">
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>Safe</strong>
+                    <p class="muted" style="margin:6px 0 0;font-size:13px;">
+                      <em>Scope:</em> Street safety, surgical protocols, and anesthesia safety are addressed separately. All surgery carries medical risk and requires in-person assessment by licensed medical professionals.
+                    </p>
+                  </div>
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>Easy</strong>
+                    <p class="muted" style="margin:6px 0 0;font-size:13px;">
+                      <em>Evidence:</em> Step-by-step support backed by the 6 self-handled items list and the 12-item × 4-column boundary table above.
+                    </p>
+                  </div>
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>Fair</strong>
+                    <p class="muted" style="margin:6px 0 0;font-size:13px;">
+                      <em>Mechanism:</em> Written itemized quotation, clear CNY standard directory, and no hidden charges. We do not make unverified “cheapest” claims.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3.5 SIM Card (2-Line Split) & 8-App Timeline -->
+              <div class="sub-card">
+                <p class="eyebrow">Connectivity &amp; local apps in Shanghai</p>
+                <h3>Phone SIM setup &amp; the 8 essential apps</h3>
+                <div class="grid-2" style="margin:12px 0 16px;">
+                  <div style="padding:14px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>(a) Pre-departure travel eSIM (data only)</strong>
+                    <p class="muted" style="margin:6px 0 0;">
+                      Sent before you fly: mobile data only, supports Google/WhatsApp roaming, does <em>not</em> include a local +86 phone number.
+                    </p>
+                  </div>
+                  <div style="padding:14px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>(b) Arrival +86 tourist SIM (in person)</strong>
+                    <p class="muted" style="margin:6px 0 0;">
+                      Obtained in person at a carrier store with your original passport and mandatory facial verification (~5–30 min; 7/15/30-day plans per carrier). Our pickup staff accompany you, but we cannot register it on your behalf. Passports with under 6 months validity or missing entry records may be declined.
+                    </p>
+                  </div>
+                </div>
+                <div class="grid-2" id="apps-8-grid"></div>
+                <p class="muted" style="margin:12px 0 0;font-size:12.5px;">
+                  Privacy rule: Real-name verification and payment binding must always be completed by you personally. We never enter your passwords or store your account credentials.
+                </p>
+              </div>
+
+              <!-- 3.6 Stay Duration (5–N days, default 15) & Post-Op Activities -->
+              <div class="sub-card">
+                <p class="eyebrow">Stay length &amp; fit-to-fly planning</p>
+                <h3>How long to plan for Shanghai (5 to N days; default recommended: 15 days)</h3>
+                <p style="margin:8px 0 12px;font-size:14px;">
+                  <strong>Formula:</strong> Minimum stay = implant printing days (per manufacturer schedule) + surgeon-set post-op observation period. Upper limit <em>N</em> is the shortest of medical, schedule, or visa limits (default recommendation: 15 days). Companion: 1 family member or friend welcome (self-funded; hotel coordination assisted).
+                </p>
+                <div class="grid-3" style="margin-bottom:14px;">
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>Hospital nights:</strong> <span class="badge-pending">[Pending surgeon]</span>
+                  </div>
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>Hotel recovery nights:</strong> <span class="badge-pending">[Pending surgeon]</span>
+                  </div>
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>Recovery-compatible free time:</strong> <span class="badge-pending">[Pending surgeon]</span>
+                  </div>
+                </div>
+                <div class="grid-3">
+                  <div style="padding:12px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13px;">
+                    <strong>Minimum sample</strong><br />
+                    Remote CT design before arrival → Day 1 arrival &amp; in-person assessment → Printing → Surgery → Observation → Follow-up &amp; discharge.
+                    <div class="muted" style="margin-top:6px;"><em>Minimum sample itinerary — subject to medical fit-to-fly clearance.</em></div>
+                  </div>
+                  <div style="padding:12px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13px;">
+                    <strong>10-day sample</strong><br />
+                    Adds unhurried hotel rest and light indoor activities between medical check-ins.
+                    <div class="muted" style="margin-top:6px;"><em>Minimum sample itinerary — subject to medical fit-to-fly clearance.</em></div>
+                  </div>
+                  <div style="padding:12px;background:var(--light-surface-2);border-radius:var(--radius-sm);font-size:13px;">
+                    <strong>15-day sample (recommended)</strong><br />
+                    Full recovery buffer, scheduled follow-ups, and light Shanghai sightseeing around medical milestones before written fit-to-fly sign-off.
+                    <div class="muted" style="margin-top:6px;"><em>Minimum sample itinerary — subject to medical fit-to-fly clearance.</em></div>
+                  </div>
+                </div>
+                <div class="grid-2" style="margin-top:14px;font-size:13.5px;">
+                  <div>
+                    <strong>Generally suitable (subject to doctor’s clearance):</strong>
+                    <span class="muted">Quiet indoor sightseeing, gentle city walks, cafes, indoor museums and shopping.</span>
+                  </div>
+                  <div>
+                    <strong>Avoid until medically cleared:</strong>
+                    <span class="muted">Long-haul flights without written fit-to-fly sign-off, intense sun exposure, strenuous exercise, diving, alcohol, and high-altitude travel.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3.7 Regulatory Context (Split by Country) -->
+              <div class="sub-card">
+                <p class="eyebrow">Regulatory context (stated separately by country)</p>
+                <h3>United States vs. China regulatory status for PEEK</h3>
+                <div class="grid-2" style="margin-top:10px;font-size:13.5px;">
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>United States (FDA)</strong>
+                    <p class="muted" style="margin:6px 0 0;">
+                      The U.S. FDA has not cleared PEEK implants for cosmetic facial augmentation below the cranium.
+                    </p>
+                  </div>
+                  <div style="padding:14px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>China (NMPA)</strong>
+                    <p class="muted" style="margin:6px 0 0;">
+                      Specific PEEK medical devices hold Class III NMPA registration in China. Surgery in Shanghai is performed under China’s NMPA-approved product and clinical framework. Specific manufacturer &amp; registration certificate details for our partner implants: <span class="badge-pending">[Pending manufacturer &amp; clinic verification]</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3.8 Risks, Recovery & "What if it goes wrong?" Path -->
+              <div class="sub-card" id="risks-recovery">
+                <p class="eyebrow">Risks, recovery &amp; safeguards</p>
+                <h3>Pain, recovery &amp; “What if it goes wrong?”</h3>
+                <p class="muted" style="margin:0 0 12px;font-size:14px;">
+                  All clinical risk details and recovery timelines are <strong>subject to in-person medical assessment</strong> and formal review by our partner surgical team.
+                </p>
+                <div class="grid-2" style="margin-bottom:14px;">
+                  <div>
+                    <strong style="font-size:14px;">10-point clinical &amp; logistical disclosure checklist</strong>
+                    <ol id="risk-10-list" style="margin:8px 0 0;padding-left:20px;font-size:13.5px;color:var(--light-muted);display:grid;gap:4px;"></ol>
+                  </div>
+                  <div style="padding:14px;background:#fcfaf4;border:1px solid #e6d8bd;border-radius:var(--radius-sm);font-size:13.5px;">
+                    <strong>“What if it goes wrong?” — Clear escalation pathway</strong>
+                    <ul style="margin:8px 0 0;padding-left:18px;display:grid;gap:6px;color:var(--light-muted);">
+                      <li><strong>While in Shanghai:</strong> Direct escalation to the treating partner hospital and our bilingual coordinator <span class="badge-pending">[24/7 contact pending clinic]</span>.</li>
+                      <li><strong>After returning home:</strong> Seek local emergency medical care first for urgent symptoms, then contact our follow-up team to relay imaging and notes to the treating surgical team.</li>
+                      <li><strong>Revision policy:</strong> <span class="badge-pending">[Pending partner institution written policy &amp; surgeon review]</span>.</li>
+                      <li><strong>What Allevia does not cover:</strong> Allevia is a coordination and travel-support service — we do not practice medicine, guarantee clinical outcomes, or cover third-party flights, local medical bills, or independent insurance claims.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3.9 "When PEEK is not the answer" (Same single source as Section 1 FAQ) -->
+              <div class="sub-card" id="not-peek-section3-mount"></div>
+
+              <!-- 3.10 "Questions to ask any clinic" (4-Question Block) -->
+              <div class="sub-card">
+                <p class="eyebrow">Buyer checklist</p>
+                <h3>4 questions to ask any clinic</h3>
+                <div class="grid-2" style="margin-top:12px;font-size:13.5px;">
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>1. What is included in the written quote?</strong>
+                    <p class="muted" style="margin:6px 0 0;">See Section 5 “What your written quote will state” — itemized surgery, design, anesthesia, hospital, and follow-up fees.</p>
+                  </div>
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>2. Who is performing the surgery and how are credentials verified?</strong>
+                    <p class="muted" style="margin:6px 0 0;">Our surgical team: <span class="badge-pending">[Pending clinic written credentials: practice category, license number, years of practice, and verified PEEK case record; verifiable via NHC registry]</span>.</p>
+                  </div>
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>3. Who do I contact if something goes wrong?</strong>
+                    <p class="muted" style="margin:6px 0 0;">See the “What if it goes wrong?” escalation path directly above (in Shanghai and after returning home).</p>
+                  </div>
+                  <div style="padding:12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">
+                    <strong>4. What happens to the price if my surgical plan changes?</strong>
+                    <p class="muted" style="margin:6px 0 0;">If your plan changes, the new price is confirmed with you before any surgery — never after.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Always-clear Service Boundary -->
+              <div style="padding:14px 16px;border-radius:var(--radius-sm);background:var(--light-surface-2);font-size:13px;color:var(--light-muted);">
+                <strong>Service boundary:</strong> Allevia Advanced Aesthetics provides aesthetic consultation support, appointment coordination and travel assistance. Medical assessment, treatment and clinical aftercare are provided by licensed medical professionals.
+              </div>
+            </div>
+          </div>
+
+          <!-- Appendix D Transition Sentence 6 (Section 3 -> Section 4) -->
+          <blockquote class="transition-quote">
+            “PEEK cases are with the simulations in Section 1. The cases below are our other procedures — bone contouring, rhinoplasty, eyes, lifting — done by the same team, under the same service.”
+          </blockquote>
+        </section>
+
+        <!-- ================================================================
+             SECTION 4: Other procedures — Default COLLAPSED
+             ================================================================ -->
+        <section id="other-procedures" class="major-section" aria-labelledby="other-heading">
+          <div class="section-accordion">
+            <div class="section-acc-head">
+              <div class="section-acc-top">
+                <div>
+                  <p class="eyebrow">Section 4 · Non-PEEK Clinical Records</p>
+                  <h2 id="other-heading" class="section-title">Other procedures</h2>
+                  <p class="muted" style="margin:4px 0 0;font-size:13.5px;">
+                    PEEK cases: 0 (see Section 1) · Other procedures: 8 stories (42 clinical photos)
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="section-toggle-btn"
+                  data-acc-target="other-body"
+                  aria-expanded="false"
+                  aria-controls="other-body"
+                >
+                  <span class="toggle-label">View 8 stories</span>
+                  <span class="acc-chevron" aria-hidden="true">▾</span>
+                </button>
+              </div>
+
+              <!-- Mandatory always-visible back-reference first line -->
+              <div class="preview-lines">
+                <p class="preview-line">
+                  PEEK cases appear with the simulations in the PEEK section. Below: our other cases — all 8 stories from the current site, none of them PEEK (including 2 bone-contouring stories, which are cheekbone and jaw reduction (bone contouring), not PEEK implants).
+                </p>
+              </div>
+            </div>
+
+            <div id="other-body" class="section-acc-body" hidden>
+              <div class="filter-bar" id="story-filters" role="tablist" aria-label="Filter clinical stories"></div>
+              <div class="stories-grid" id="stories-grid"></div>
+            </div>
+          </div>
+
+          <!-- Appendix D Transition Sentence 7 (Section 4 -> Section 5) -->
+          <blockquote class="transition-quote">
+            “Each procedure is priced differently, so here is how pricing works — starting with PEEK, which is quoted in writing after your CT review.”
+          </blockquote>
+        </section>
+
+        <!-- ================================================================
+             SECTION 5: Prices & your quote — Default COLLAPSED
+             ================================================================ -->
+        <section id="prices" class="major-section" aria-labelledby="prices-heading">
+          <div class="section-accordion">
+            <div class="section-acc-head">
+              <div class="section-acc-top">
+                <div>
+                  <p class="eyebrow">Section 5 · Transparent Pricing &amp; Written Quote Rules</p>
+                  <h2 id="prices-heading" class="section-title">Prices &amp; your quote</h2>
+                </div>
+                <button
+                  type="button"
+                  class="section-toggle-btn"
+                  data-acc-target="prices-body"
+                  aria-expanded="false"
+                  aria-controls="prices-body"
+                >
+                  <span class="toggle-label">View full pricing &amp; 54 items</span>
+                  <span class="acc-chevron" aria-hidden="true">▾</span>
+                </button>
+              </div>
+
+              <!-- Always-visible PEEK written quote statement + O16 lines -->
+              <div class="preview-lines">
+                <p class="preview-line">
+                  <strong>Custom PEEK implants: quoted in writing (after consultation and CT review).</strong>
+                  PEEK is not listed in the 54-item standard directory below.
+                </p>
+                <p class="preview-line muted" style="font-size:13.5px;">
+                  Prices last checked <span class="badge-pending">[Month pending verification]</span> ·
+                  <strong>If your plan changes, the new price is confirmed with you before any surgery — never after.</strong>
+                </p>
+              </div>
+            </div>
+
+            <div id="prices-body" class="section-acc-body" hidden>
+              <!-- What your written quote will state -->
+              <div class="sub-card">
+                <p class="eyebrow">Written quote standard</p>
+                <h3>What your written quote will state</h3>
+                <ul style="margin:10px 0 0;padding-left:20px;display:grid;gap:8px;font-size:14px;">
+                  <li>
+                    <strong>Itemized clinical fees:</strong> Surgery fee, design fees, anesthesia fee, hospital fee, and follow-up fee listed separately.
+                  </li>
+                  <li>
+                    <strong>Two separate design fees (paid at different stages — not the same fee):</strong>
+                    <ul style="margin:6px 0 0;padding-left:18px;display:grid;gap:5px;color:var(--light-muted);">
+                      <li>
+                        <strong>Simulation design fee: USD 299</strong> — credited as USD 1,000 toward your PEEK surgery only; non-refundable once design has started, valid 12 months, non-transferable <span class="badge-pending">[Pending clinic written confirmation]</span>. Covers: full-head design from your CT, before/after views, unlimited revisions <span class="badge-pending">[Pending clinic written confirmation]</span>.
+                      </li>
+                      <li>
+                        <strong>Implant design fee: ~USD 300</strong> <span class="badge-pending">[Pending clinic written confirmation]</span> — charged separately before final implant CAD production begins; paying USD 299 for simulation does not cover the implant design fee.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Unified refund rule for both design fees:</strong>
+                    Non-refundable once first-draft design work has started (evaluated independently for simulation design vs. implant design), regardless of who cancels or the reason (including temporary or permanent unsuitability after in-person review). <strong>Only exception:</strong> if design work has not started, 100% is refunded to the original payment method within 7–14 working days.
+                  </li>
+                  <li>
+                    <strong>USD 1,000 surgical credit rules:</strong>
+                    Applies to PEEK surgery only (cannot offset design fees or non-PEEK procedures); valid 12 months from payment; non-transferable; if USD 299 is refunded (design not started), the USD 1,000 credit is voided; if a doctor finds you temporarily unsuitable, the credit stays valid for 12 months; if permanently unsuitable, the credit is voided.
+                  </li>
+                  <li>
+                    <strong>Exchange rate, tax &amp; card fees:</strong>
+                    USD/CNY conversion basis, tax inclusion, and payment-card fee responsibility <span class="badge-pending">[Pending clinic written confirmation]</span>.
+                  </li>
+                </ul>
+                <p style="margin:12px 0 0;font-size:14px;font-weight:600;">
+                  “If something is not in the quotation, it is not in the price.”
+                  <span class="badge-pending" style="font-weight:500;">[Negotiating position — pending clinic written confirmation]</span>
+                </p>
+                <p class="muted" style="margin:8px 0 0;font-size:13.5px;">
+                  Consultation is free. Simulation design is a paid service.
+                </p>
+              </div>
+
+              <!-- Per-Day Variable Cost Structure -->
+              <div class="sub-card">
+                <p class="eyebrow">Variable stay expenses</p>
+                <h3>Fixed vs. per-day cost structure</h3>
+                <p class="muted" style="margin:0 0 10px;font-size:13.5px;">
+                  Fixed clinical fees are stated in your written quote. Variable stay items scale with your chosen stay length (numbers pending clinic confirmation):
+                </p>
+                <div class="grid-2" style="font-size:13.5px;">
+                  <div style="padding:10px 12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">Hotel / night: <span class="badge-pending">[Pending clinic]</span></div>
+                  <div style="padding:10px 12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">Companion / day: <span class="badge-pending">[Pending clinic]</span></div>
+                  <div style="padding:10px 12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">Private transfers / trip: <span class="badge-pending">[Pending clinic]</span></div>
+                  <div style="padding:10px 12px;border:1px solid var(--light-border);border-radius:var(--radius-sm);">Local transport &amp; meals / day: <span class="badge-pending">[Pending clinic]</span></div>
+                </div>
+              </div>
+
+              <!-- 54-Item Standard Treatment Price Directory -->
+              <div class="sub-card">
+                <p class="eyebrow">Standard treatment directory (54 procedures · 7 categories · CNY)</p>
+                <h3>Reference rates for non-PEEK procedures</h3>
+                <p class="muted" style="margin:6px 0 14px;font-size:13.5px;">
+                  All itemised procedures are listed in Chinese Yuan (CNY) as standard reference rates. Final treatment costs are confirmed via formal medical consultation and written quotation. Other currencies (AUD, CAD, CHF, EUR, GBP, HKD, JPY, NZD, SGD, USD) are a quoting convenience only with no hidden USD markup; the written quote prevails.
+                </p>
+
+                <input
+                  type="search"
+                  id="pricing-search"
+                  class="search-input"
+                  placeholder="Filter 54 procedures by name…"
+                  aria-label="Filter procedures by name"
+                />
+                <div class="filter-bar" id="pricing-filters" role="tablist" aria-label="Filter price categories"></div>
+
+                <div class="responsive-table-wrap">
+                  <table class="data-table stack-mobile" aria-label="54-item standard treatment price directory">
+                    <thead>
+                      <tr>
+                        <th>Category</th>
+                        <th>Procedure</th>
+                        <th>Reference Fee (CNY)</th>
+                        <th>Stay / Hospital</th>
+                      </tr>
+                    </thead>
+                    <tbody id="pricing-tbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appendix D Final Transition Sentence (Section 5 -> Final CTA) -->
+          <blockquote class="transition-quote">
+            “Your written quote — after consultation and CT review — is fixed: no hidden charges, no surprises. If the plan changes, the new price is confirmed with you before any surgery — never after.”
+          </blockquote>
+        </section>
+
+        <!-- ================================================================
+             FINAL FREE CONSULTATION CTA (WhatsApp + Form ONLY — No 299 button)
+             ================================================================ -->
+        <section id="contact" class="major-section" aria-labelledby="contact-heading">
+          <p class="eyebrow">Free Consultation · Direct Enquiry</p>
+          <h2 id="contact-heading" class="section-title">Start with your questions — free, no obligation</h2>
+          <p class="muted" style="margin:6px 0 0;max-width:64ch;">
+            Ask first. No files, no payment, no obligation.
+            <strong>We reply within 2 working days.</strong> <span class="badge-pending">[Pending clinic confirmation]</span>
+          </p>
+
+          <div class="contact-grid">
+            <form id="enquiry-form" class="card-light form-grid" novalidate>
+              <div class="grid-2">
+                <div class="form-field">
+                  <label for="f-name">Name *</label>
+                  <input id="f-name" name="name" type="text" required autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label for="f-contact">Email or WhatsApp number *</label>
+                  <input id="f-contact" name="contact" type="text" required />
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-field">
+                  <label for="f-country">Country or region *</label>
+                  <input id="f-country" name="country" type="text" required autocomplete="country-name" />
+                </div>
+                <div class="form-field">
+                  <label for="f-lang">Preferred consultation language</label>
+                  <select id="f-lang" name="language">
+                    <option value="English" selected>English</option>
+                    <option value="Chinese">Chinese</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-field">
+                  <label for="f-topic">What would you like to explore? *</label>
+                  <select id="f-topic" name="topic" required>
+                    <option value="Custom 3D PEEK facial implants (free question)">Custom 3D PEEK facial implants (free question)</option>
+                    <option value="PEEK simulation design enquiry">PEEK simulation design enquiry</option>
+                    <option value="Other procedures (bone contouring, rhinoplasty, eyes, lifting)">Other procedures (bone contouring, rhinoplasty, eyes, lifting)</option>
+                    <option value="Shanghai travel & stay planning">Shanghai travel &amp; stay planning</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="f-month">Preferred travel month (optional)</label>
+                  <input id="f-month" name="travelMonth" type="text" placeholder="e.g. April 2027" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="f-notes">Anything else you would like us to know? (optional)</label>
+                <textarea
+                  id="f-notes"
+                  name="notes"
+                  placeholder="Tell us about your goals, questions, or the support you would like during your visit."
+                ></textarea>
+              </div>
+
+              <label class="checkbox-row">
+                <input type="checkbox" id="f-privacy" required />
+                <span>I have read the Privacy Notice beside this form and agree to be contacted about my enquiry.</span>
+              </label>
+
+              <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+                <button type="submit" class="btn btn-primary-light">Send via WhatsApp</button>
+                <a
+                  id="direct-email-link"
+                  href="mailto:a2445406836@gmail.com?subject=Consultation%20enquiry"
+                  class="btn btn-outline-light"
+                >
+                  Email us directly
+                </a>
+              </div>
+
+              <p class="muted" style="margin:0;font-size:12.5px;">
+                Submitting prepares a prefilled WhatsApp message. Nothing is stored on this static website.
+              </p>
+
+              <div id="form-feedback" class="handoff-box" hidden></div>
+            </form>
+
+            <!-- Always-Visible Privacy & Photo Consent Notice (never hidden in accordion) -->
+            <aside class="card-light" style="display:grid;gap:12px;font-size:13.5px;">
+              <h3 style="font-size:16px;">Privacy &amp; photo notice</h3>
+              <p class="muted" style="margin:0;">
+                <strong>Do not send sensitive documents here:</strong> If photographs or CT files are needed later, we will explain how to provide them through a separate secure transfer. <strong>Please do not send passport or payment-card images through this form.</strong>
+              </p>
+              <p class="muted" style="margin:0;">
+                <strong>Photo &amp; story consent:</strong> Publishing your story, photographs, or feedback always requires separate explicit permission.
+              </p>
+              <p class="muted" style="margin:0;">
+                <strong>Data retention &amp; deletion:</strong> Enquiries that do not proceed are deleted 12 months after last contact. CT data used for simulation is shared only with our partner institution and implant factory with your consent and deleted upon completion or request.
+              </p>
+              <p class="muted" style="margin:0;">
+                <strong>Direct email:</strong>
+                <a href="mailto:a2445406836@gmail.com" style="color:var(--bronze);text-decoration:underline;">a2445406836@gmail.com</a>
+              </p>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong style="color:#f5f3ee;">Service boundary:</strong>
+          Allevia Advanced Aesthetics provides consultation support, appointment coordination and travel assistance. Website information is general and does not replace an individual medical consultation. Treatment suitability and clinical decisions are determined by licensed medical professionals.
+        </div>
+        <div>
+          <strong style="color:#f5f3ee;">Simulation notice:</strong>
+          Simulation designs and demonstrator tiles on this site are 3D illustrations and are not a medical promise. Final implant geometry follows the clinician’s in-person assessment and factory CAD files.
+        </div>
+        <div>
+          <strong style="color:#f5f3ee;">Data controller:</strong>
+          Allevia Advanced Aesthetics · Contact:
+          <a href="mailto:a2445406836@gmail.com" style="color:var(--gold);">a2445406836@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer-partner-row">
+        <span>© 2026 Allevia Advanced Aesthetics. All rights reserved.</span>
+        <button type="button" class="footer-partner-link" id="open-partner-modal">
+          Working with institutions
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared Lightbox & Partner Info Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close dialog">×</button>
+      <h3 id="modal-title" style="font-family:var(--font-serif);font-size:26px;margin-bottom:8px;"></h3>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
