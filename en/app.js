@@ -70,6 +70,15 @@ function initHero3D() {
   const img2d = $('#viewer-2d-img');
   const pillsWrap = $('#hero-area-pills');
 
+  // Register Meshopt decoder on the defined ModelViewerElement BEFORE setting src
+  customElements.whenDefined('model-viewer').then(() => {
+    const MV = customElements.get('model-viewer');
+    if (MV) {
+      MV.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.20.0/meshopt_decoder.js';
+    }
+    viewer.src = MEDIA_CONFIG.MODEL_GLB_SRC;
+  });
+
   // Inject 7 clickable Cömert-style hotspots on the 3D skull
   AREAS_A_LIST.forEach((area) => {
     const btn = document.createElement('button');
